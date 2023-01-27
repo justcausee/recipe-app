@@ -1,20 +1,52 @@
-html,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section{
+    width: 100%;
+    height: 15vh;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    height: 10vh;
+    right: 0;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 15 px
+}
+
+section nav ul li a:hover{
+    color: green;
+}
+
+section nav .icon i{
+    font-size: 18px;
+    color: #000;
+    margin : 0 5px;
+    cursor: pointer;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: rgb(250, 250, 250);
     text-align: center;
-}
-
-h1,
-h2 {
-    color: darkred;
-}
-
-h3,
-p,
-li {
-    color: rgb(128, 0, 111);
 }
 
 img {
@@ -25,26 +57,15 @@ main {
     margin: 0 20%;
 }
 
-nav {
-    background-color: rgb(250, 250, 250);
-    padding: 10px;
-    width: 100%
-}
-
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
-
 nav li {
     display: inline;
 }
 
 nav a {
     text-decoration: none;
-    font-size: 1.6em;
-    color: green;
-    margin-right: 25px;
+    font-size: 1.2em;
+    color: rgb(152, 54, 161);
+    margin-right: 10px;
 }
 
 nav a:hover {
