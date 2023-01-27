@@ -1,0 +1,88 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: darkred;
+}
+
+h3,
+p,
+li {
+    color: rgb(128, 0, 111);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+main {
+    margin: 0 20%;
+}
+
+nav {
+    background-color: rgb(250, 250, 250);
+    padding: 10px;
+    width: 100%
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.6em;
+    color: rgb(128, 0, 111);
+    margin-right: 25px;
+}
+
+nav a:hover {
+    color: darkred;
+}
+
+#banner {
+    width: 30%;
+    height: auto;
+    background-color: rgb(250, 250, 250);
+}
+
+#banner img {
+    width: 60%;
+    height: auto;
+}
+
+.service {
+    display: inline-block;
+    background-color: rgb(250, 250, 250);
+    border: 5px solid rgb(128, 0, 111);
+    border-radius: 5px;
+    color: darkred;
+    font-size: 2em;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+table {
+    border: 3px solid black;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid black;
+    padding: 5px;
+}
