@@ -14,6 +14,8 @@ section {
     height: 10vh;
 }
 
+/* Navigation */
+
 section nav {
     display: flex;
     justify-content: space-around;
@@ -69,34 +71,130 @@ section nav .icon i:hover {
     color: rgb(152, 54, 161);
 }
 
-section .main {
+/* Home */
+
+.home-container-1 {
+    display:flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+    top: 30px;
+}
+
+.home-container-1 .box {
+    flex: 2;
+    order: 2;
+}
+
+.home-container-1 .box a {
+    text-decoration: none;
+    color: rgb(152, 54, 161);
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+.home-container-1 .box a:hover::after {
+    width: 100%;
+}
+
+.home-container-1 .box a:hover {
+    color: green;
+}
+
+.home-container-1 .box img {
+    width: 80%;
+    position: relative;
+}
+
+.home-container-2 {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: stretch;
+    justify-content: space-between;
     position: relative;
-    top: 130px;
+    top: 30px;
 }
 
-section .main .men_text h1 {
-    font-size: 60px;
-    position: relative;
-    top: -90px;
-    left: 20px;
+.home-container-2 .box {
+    flex: 2;
+    order: 2;
 }
 
-section .main .main_image img {
-    width: 700px;
-    position: relative;
-    left: 70px;
+.home-container-2 .box a {
+    text-decoration: none;
+    color: rgb(152, 54, 161);
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
 }
 
-img {
-    width: 50%;
+.home-container-2 .box a:hover::after {
+    width: 100%;
+}
+
+.home-container-2 .box a:hover {
+    color: green;
+}
+
+.home-container-2 .box img {
+    width: 80%;
+    position: relative;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(250, 250, 250);
     text-align: center;
+    margin: 0rem 3rem 3rem 3rem;
+}
+
+/* About (Image not working) */
+.about {
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.about .about_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_main .image img {
+    width: 800px;
+    position: relative;
+    top: 60px;
+}
+
+.about .about_main .about_text h1 span {
+    color: rgb(152, 54, 161);
+    margin-right: 15px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about .about_main .about_text h1 {
+    font-size: 55px;
+    position: relative;
+    bottom: 50px;
+}
+
+.about .about_main .about_text h3 {
+    font-size: 30px;
+    margin: 0 0 50px 0;
+}
+
+.about .about_main .about_text p {
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+}
+
+.about .about_btn {
+    background: #fac031;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    left: 55%;
+    bottom: 30px;
 }
