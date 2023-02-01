@@ -185,16 +185,7 @@ body {
 .about .about_main .about_text p {
     width: 650px;
     text-align: justify;
-    margin-right: 30px;
-    line-height: 22px;
-}
-
-.about .about_btn {
-    background: #fac031;
-    padding: 12px 25px;
-    text-decoration: none;
-    color: #fff;
-    position: relative;
-    left: 55%;
-    bottom: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    line-height: 20px;
 }
