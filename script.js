@@ -18,22 +18,22 @@ searchInput.addEventListener("input", (e) => {
 // API NOT WORKING
 // user is switched with recipe and be sure to align with API
 fetch(
-  "https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes"
+  "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch"
 )
   .then((res) => res.json())
   .then((data) => {
-    recipe = data.map((user) => {
+    recipes = data.map((user) => {
       const card = userCardTemplate.content.cloneNode(true).children[0];
       const header = card.querySelector("[data-header]");
       const body = card.querySelector("[data-body]");
-      header.textContent = recipe.name;
-      body.textContent = recipe.list;
+      header.textContent = recipes.name;
+      body.textContent = recipes.list;
       userCardContainer.append(card);
 
       // FIX THIS - data needs to match with API
       return {
-        name: recipe.name,
-        ingredients: recipe.ingredients,
+        name: recipes.name,
+        ingredients: recipes.ingredients,
         element: card,
       };
     });
