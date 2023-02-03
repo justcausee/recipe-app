@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nothing Beets Our Recipes</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section id="Home">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img id="banner" alt="Banner logo" src="assets\images\banner.png"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="popular.html">What's Popular</a></li>
+                <li><a href="seasonal.html">Seasonal</a></li>
+                <li><a href="edit.html">Edit Recipes</a></li>
+            </ul>
+<!-- TO DO: Add search bar -->
+            <div class="search-wrapper">
+                <label for="search">Search Recipes</label>
+                <input type="search" id="search" data-search>
+            </div>
+            <div class="recipe-cards" data-recipe-cards-container>
+            <template data-recipe-template>
+                <div class="card">
+                    <div class="header"></div>
+                    <div class="body"></div>
+                </div>
+            </template>
+            </div>
+
+<!-- ICONS -->
+            <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="saved.html"><i class="fa-solid fa-heart"></i>
+            </div>
+        </nav>
+    </section>
+
+<!-- HOME PAGE -->
+    <main>
+        <div class="home-container-1" id="Home"> 
+            <div class="box">
+                <h3><a href="popular.html">What's Popular Today!</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo animi suscipit, inventore ad aliquid tempora temporibus itaque amet assumenda consequuntur dolores dolorem enim, quasi distinctio voluptates quae perferendis. Nisi, illo.</p>
+                <a href="popular.html"><img src="assets\images\meat.png"></a>
+            </div>
+            <div class="box">
+                <h3><a href="seasonal.html">Seasonal Recipes With Your Family!</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo animi suscipit, inventore ad aliquid tempora temporibus itaque amet assumenda consequuntur dolores dolorem enim, quasi distinctio voluptates quae perferendis. Nisi, illo.</p>
+                <a href="seasonal.html"><img src="assets\images\ramen.jpg"></a>
+            </div>
+            <div class="box">
+                <h3><a href="edit.html">Share Your Recipes With Our Beloved Community!</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo animi suscipit, inventore ad aliquid tempora temporibus itaque amet assumenda consequuntur dolores dolorem enim, quasi distinctio voluptates quae perferendis. Nisi, illo.</p>
+                <a href="edit.html"><img src="assets\images\vegan.jpg"></a>
+            </div>
+        </div>
+        <div class="home-container-2" id="Home">
+            <div class="box">
+                <h3><a href="">SAMPLE PICTURE</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo animi suscipit, inventore ad aliquid tempora
+                    temporibus itaque amet assumenda consequuntur dolores dolorem enim, quasi distinctio voluptates quae
+                    perferendis. Nisi, illo.</p>
+                <a href=""><img src="assets\images\sample.jpg"></a>
+            </div>
+            <div class="box">
+                <h3><a href="">SAMPLE PICTURE</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo animi suscipit, inventore ad aliquid tempora
+                    temporibus itaque amet assumenda consequuntur dolores dolorem enim, quasi distinctio voluptates quae
+                    perferendis. Nisi, illo.</p>
+                <a href=""><img src="assets\images\sample.jpg"></a>
+            </div>
+            <div class="box">
+                <h3><a href="">SAMPLE PICTURE</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo animi suscipit, inventore ad aliquid tempora
+                    temporibus itaque amet assumenda consequuntur dolores dolorem enim, quasi distinctio voluptates quae
+                    perferendis. Nisi, illo.</p>
+                <a href=""><img src="assets\images\sample.jpg"></a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
