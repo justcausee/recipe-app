@@ -3,6 +3,13 @@ const userCardContainer = document.querySelector(
   "[data-recipe-cards-container]"
 );
 const searchInput = document.querySelector("[data-search]");
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '1ceed61d7cmshbb898d593945536p104570jsn6c6039b6fd9b',
+		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+	}
+};
 
 let recipes = [];
 
@@ -15,13 +22,12 @@ searchInput.addEventListener("input", (e) => {
   });
 });
 
-// API NOT WORKING
+// API WORKS
 // user is switched with recipe and be sure to align with API
-fetch(
-  "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch"
-)
-  .then((res) => res.json())
-  .then((data) => {
+fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
     recipes = data.map((user) => {
       const card = userCardTemplate.content.cloneNode(true).children[0];
       const header = card.querySelector("[data-header]");
@@ -30,11 +36,10 @@ fetch(
       body.textContent = recipes.list;
       userCardContainer.append(card);
 
-      // FIX THIS - data needs to match with API
-      return {
-        name: recipes.name,
-        ingredients: recipes.ingredients,
+      return { // FIX THIS - data needs to match with API
+        name: recipes.name, 
+        ingredients: recipes.list,
         element: card,
       };
     });
-  });
+
