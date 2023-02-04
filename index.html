@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -25,8 +26,7 @@
             </ul>
 <!-- TO DO: Add search bar -->
             <div class="search-wrapper">
-                <label for="search">Search Recipes</label>
-                <input type="search" id="search" data-search>
+                <input type="search" placeholder="search recipes" id="search" data-search>
             </div>
             <div class="recipe-cards" data-recipe-cards-container>
             <template data-recipe-template>
@@ -91,5 +91,3 @@
 </body>
 
 </html>
-
-<script src="script.js" type="module"></script>

@@ -1,4 +1,4 @@
-const userCardTemplate = document.querySelector("[data-recipe-template]");
+const recipeCardTemplate = document.querySelector("[data-recipe-template]");
 const userCardContainer = document.querySelector(
   "[data-recipe-cards-container]"
 );
@@ -26,16 +26,16 @@ searchInput.addEventListener("input", (e) => {
 // user is switched with recipe and be sure to align with API
 fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes', options)
 	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-    recipes = data.map((user) => {
-      const card = userCardTemplate.content.cloneNode(true).children[0];
+  .then(data => {
+	// .then(response => console.log(response))
+	// .catch(err => console.error(err));
+  //   recipes = data.map((recipe) => {
+      const card = recipeCardTemplate.content.cloneNode(true).children[0];
       const header = card.querySelector("[data-header]");
       const body = card.querySelector("[data-body]");
-      header.textContent = recipes.name;
-      body.textContent = recipes.list;
+      header.textContent = recipes.list; // FIX parameter
+      body.textContent = recipes.list-similarities; // FIX parameter
       userCardContainer.append(card);
-
       return { // FIX THIS - data needs to match with API
         name: recipes.name, 
         ingredients: recipes.list,
