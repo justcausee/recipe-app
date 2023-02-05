@@ -24,7 +24,6 @@ create table recipe_ingredient (
 	CONSTRAINT fk_measure FOREIGN KEY(measure_id) REFERENCES Measure(id));
 
 
-
 INSERT INTO measure (name) VALUES('cup'), ('teaspoon'), ('tablespoon'), ('grams');
 
 INSERT INTO ingredient (name) VALUES('egg'), ('canola oil'), ('salt'), ('sugar'), ('chocolate'), ('vanilla extract'), ('flour');
