@@ -1,9 +1,9 @@
 const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '1ceed61d7cmshbb898d593945536p104570jsn6c6039b6fd9b',
-		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
-	}
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "1ceed61d7cmshbb898d593945536p104570jsn6c6039b6fd9b",
+    "X-RapidAPI-Host": "tasty.p.rapidapi.com",
+  },
 };
 
 // formtest is just for testing
@@ -17,10 +17,13 @@ formtest.addEventListener("submit", (event) => {
   fetchRecipes(searchTerm);
 });
 
-fetch('https://tasty.p.rapidapi.com/recipes/auto-complete?prefix=chicken%20soup', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+fetch(
+  "https://tasty.p.rapidapi.com/recipes/auto-complete?prefix=chicken%20soup",
+  options
+)
+  .then((response) => response.json())
+  .then((response) => console.log(response))
+  .catch((err) => console.error(err));
 
 function displayRecipes(recipes) {
   const recipeList = document.querySelector("#recipe-list");

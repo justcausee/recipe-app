@@ -18,16 +18,31 @@
             <div class="logo">
                 <a href="index.html"><img id="banner" alt="Banner logo" src="assets\images\banner.png"></a>
             </div>
-
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="popular.html">What's Popular</a></li>
                 <li><a href="seasonal.html">Seasonal</a></li>
                 <li><a href="edit.html">Edit Recipes</a></li>
             </ul>
+            <!-- SEARCH BAR (STILL NEED FIXING) -->
+            <form id="search-form">
+                <input type="text" id="search-input">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
 
+            <script>
+                const form = document.getElementById('search-form');
+                const input = document.getElementById('search-input');
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const searchValue = input.value;
+                    console.log(searchValue);
+                });
+            </script>
+
+            <!-- ICONS -->
             <div class="icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
                 <a href="saved.html"><i class="fa-solid fa-heart"></i></a>
             </div>
         </nav>

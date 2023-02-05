@@ -4,9 +4,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const helpers = require("handlebars-helpers");
 const queries = require("./queries");
-const exphbs = require("exphbs");
-
-// const exphbs = require("express-handlebars");
+const exphbs = require("express-handlebars");
 
 const app = express();
 const port = 5001;
@@ -22,14 +20,6 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
-
-app.engine(
-  "handlebars",
-  exphbs({
-    settings: {},
-    helpers: [helpers.comparison()],
-  })
-);
 
 app.set("view engine", "handlebars");
 app.use(express.static(`${__dirname}/public`));
