@@ -18,22 +18,37 @@
             <div class="logo">
                 <a href="index.html"><img id="banner" alt="Banner logo" src="assets\images\banner.png"></a>
             </div>
-
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="popular.html">What's Popular</a></li>
                 <li><a href="seasonal.html">Seasonal</a></li>
                 <li><a href="edit.html">Edit Recipes</a></li>
             </ul>
+            <!-- SEARCH BAR (STILL NEED FIXING) -->
+            <form id="search-form">
+                <input type="text" id="search-input">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
 
+            <script>
+                const form = document.getElementById('search-form');
+                const input = document.getElementById('search-input');
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    const searchValue = input.value;
+                    console.log(searchValue);
+                });
+            </script>
+
+            <!-- ICONS -->
             <div class="icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
                 <a href="saved.html"><i class="fa-solid fa-heart"></i></a>
             </div>
         </nav>
     </section>
 
-    <!-- ABOUT PAGE -->
+<!-- ABOUT PAGE -->
     <div class="about" id="About">
         <div class="about_main">
             <div class="image">
@@ -41,9 +56,14 @@
             </div>
         <div class="about_text">
             <h1><span>About Us</span></h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatibus laborum placeat eum, ducimus reiciendis exercitationem fugit delectus corporis enim suscipit a ullam ratione amet dignissimos quisquam impedit veritatis voluptas.
-            </p>
+            <p> Welcome to our Nothing Beets Our Recipes! 
+                We have always had a passion for cooking and experimenting with new ingredients, and we decided to create this website as a way to share my favorite recipes with others. 
+                I believe that cooking should be fun, accessible, and delicious. 
+                That's why I strive to create recipes that are easy to follow, with ingredients that are easily available, and that taste amazing. 
+                Whether you're an experienced cook or just starting out, I hope you'll find something here that inspires you to get in the kitchen and start cooking. 
+                Thank you for visiting Nothing Beets Our Recipes. If you have any questions or comments, please feel free to contact me. 
+                I'd love to hear from you!</p>
+            </main>
             </div>
     </div>
 </body>

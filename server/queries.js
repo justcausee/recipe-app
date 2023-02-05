@@ -1,12 +1,12 @@
-const db = require('./db');
+const db = require("./db");
 
-async function getAllRecipes(search = '') {
+async function getAllRecipes(search = "") {
   const query = await db.query({
-    text: 'select * from recipe where lower(name) like lower($1) ORDER BY created_at DESC;',
+    text: "select * from recipe where lower(name) like lower($1) ORDER BY created_at DESC;",
     values: [`%${search}%`],
   });
 
-  return query.rows;  
+  return query.rows;
 }
 
 async function getOneRecipe(id) {
@@ -30,7 +30,7 @@ async function getOneRecipe(id) {
 async function insertIngredients(ingredients) {
   const lowerCaseIngredients = ingredients.map((i) => i.toLowerCase());
   const query = await db.query(
-    'INSERT INTO ingredient (name) SELECT * FROM UNNEST ($1::text[]) ON CONFLICT DO NOTHING;',
+    "INSERT INTO ingredient (name) SELECT * FROM UNNEST ($1::text[]) ON CONFLICT DO NOTHING;",
     [lowerCaseIngredients]
   );
 
@@ -38,15 +38,23 @@ async function insertIngredients(ingredients) {
 }
 
 async function getIngredients(names) {
-  const query = await db.query('SELECT * FROM ingredient WHERE name = ANY($1::text[])', [names]);
+  const query = await db.query(
+    "SELECT * FROM ingredient WHERE name = ANY($1::text[])",
+    [names]
+  );
 
   return query.rows;
-}bju   
+}
 
-async function insertRecipeIngredients(recipeIds, ingredientsIds, measuresIds, amounts) {
+async function insertRecipeIngredients(
+  recipeIds,
+  ingredientsIds,
+  measuresIds,
+  amounts
+) {
   measuresIds = measuresIds.map((m) => m || null);
   const query = await db.query(
-    'INSERT INTO recipe_ingredient (recipe_id, ingredient_id, measure_id, amount) SELECT * FROM UNNEST ($1::int[], $2::int[], $3::int[], $4::int[])',
+    "INSERT INTO recipe_ingredient (recipe_id, ingredient_id, measure_id, amount) SELECT * FROM UNNEST ($1::int[], $2::int[], $3::int[], $4::int[])",
     [recipeIds, ingredientsIds, measuresIds, amounts]
   );
 
@@ -54,14 +62,14 @@ async function insertRecipeIngredients(recipeIds, ingredientsIds, measuresIds, a
 }
 
 async function getAllMeasures() {
-  const query = await db.query('select * from measure');
+  const query = await db.query("select * from measure");
 
   return query.rows;
 }
 
 async function insertRecipe(name, description, instructions, image) {
   const query = await db.query(
-    'INSERT INTO recipe (name, description, instructions, image) VALUES ($1, $2, $3, $4) RETURNING *',
+    "INSERT INTO recipe (name, description, instructions, image) VALUES ($1, $2, $3, $4) RETURNING *",
     [name, description, instructions, image]
   );
 
@@ -91,20 +99,23 @@ function mapRowsToNestedData(rows) {
 }
 
 async function removeRecipe(id) {
-  const query = await db.query('DELETE FROM recipe WHERE id = $1;', [id]);
+  const query = await db.query("DELETE FROM recipe WHERE id = $1;", [id]);
 
   return query.rows;
 }
 
 async function removeRecipeIngredients(recipeId) {
-  const query = await db.query('DELETE FROM recipe_ingredient WHERE recipe_id = $1', [recipeId]);
+  const query = await db.query(
+    "DELETE FROM recipe_ingredient WHERE recipe_id = $1",
+    [recipeId]
+  );
 
   return query;
 }
 
 async function updateRecipe(id, values) {
   const query = await db.query(
-    'UPDATE recipe SET name=$1, description=$2, instructions=$3, image=COALESCE($4, image) WHERE id=$5 RETURNING *',
+    "UPDATE recipe SET name=$1, description=$2, instructions=$3, image=COALESCE($4, image) WHERE id=$5 RETURNING *",
     [...values, id]
   );
 
