@@ -6,7 +6,7 @@ async function getAllRecipes(search = '') {
     values: [`%${search}%`],
   });
 
-  return query.rows;
+  return query.rows;  
 }
 
 async function getOneRecipe(id) {
@@ -41,7 +41,7 @@ async function getIngredients(names) {
   const query = await db.query('SELECT * FROM ingredient WHERE name = ANY($1::text[])', [names]);
 
   return query.rows;
-}
+}bju   
 
 async function insertRecipeIngredients(recipeIds, ingredientsIds, measuresIds, amounts) {
   measuresIds = measuresIds.map((m) => m || null);
