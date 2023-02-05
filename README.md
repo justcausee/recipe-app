@@ -23,7 +23,7 @@ To use the app, head onto the website and decide on what recipe you may be inter
 
 ## Bugs/addresses
 
-There's no functionality just yet until we update this README file. The issue we're facing right now is connecting the backend with the frontend. However, the styling and the links are still up. This will essentially give you an idea of what a fully functional website should look like.
+There's no functionality just yet at the time of this README file. The issue we're facing right now is connecting the backend with the frontend. However, the styling and the links are still up. This will essentially give you an idea of what a fully functional website should look like.
 
 ## Inspirations
 
