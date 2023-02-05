@@ -17,10 +17,7 @@ formtest.addEventListener("submit", (event) => {
   fetchRecipes(searchTerm);
 });
 
-fetch(
-  "https://tasty.p.rapidapi.com/recipes/auto-complete?prefix=chicken%20soup",
-  options
-)
+fetch("https://tasty.p.rapidapi.com/recipes/list", options)
   .then((response) => response.json())
   .then((response) => console.log(response))
   .catch((err) => console.error(err));
