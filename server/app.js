@@ -21,6 +21,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
+// app.engine("handlebars", exphbs({ helpers: [helpers.comparison()] }));
 app.set("view engine", "handlebars");
 app.use(express.static(`${__dirname}/public`));
 app.use(methodOverride("_method"));
