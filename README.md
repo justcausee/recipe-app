@@ -5,7 +5,6 @@ recipe-app is an app where you can find recipes to cook at home. We named the ap
 ## Authors
 
 Alan Nhan - GitHub username: justcausee
-Dirin Arrayales - GitHub username: arrayales94
 
 ## System Components
 
