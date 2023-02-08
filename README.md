@@ -13,8 +13,9 @@ Backend - Node.JS
 
 ## Commands (how to launch frontend, backend, etc.)
 
-The frontend can be launched on a local machine through the html file.
-The backend can be launched with the "node app.js" in the server folder.
+Make sure Express is installed by using the command 'npm install express'
+The server can be launched with the "node app.js" in the server folder.
+The frontend can be launched on a local machine from localhost on port 3001.
 
 ## How to use the APP
 
