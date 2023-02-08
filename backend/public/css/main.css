@@ -1,6 +1,22 @@
 .space-top {
     margin-top: 2rem;
   }
+
+  .container {
+    text-decoration: none;
+    color: rgb(152, 54, 161);
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+  }
+  
+  .container:hover::after {
+    width: 100%;
+  }
+
+  .containera:hover {
+    color: green
+  }
   
   .description-container {
     display: flex;
@@ -24,12 +40,43 @@
     white-space: pre-line;
   }
   
-  @media only screen and (max-width: 768px) {
-    .description-container {
-        display: block;
-    }
-  
-    .description-container form {
-        margin-bottom: 2rem;
-    }
+@media only screen and (max-width: 768px) {
+  .description-container {
+      display: block;
   }
+
+  .description-container form {
+      margin-bottom: 2rem;
+  }
+}
+
+/* ABOUT */
+
+.about {
+  width: 100%;
+  height: 100vh;
+  padding: 20px 0;
+}
+
+.about .about_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about .about_main .about_text h1 span {
+  color: green;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  align-items: center;
+}
+
+.about .about_main .about_text h1 {
+  font-size: 55px;
+  position: relative;
+  bottom: 30px;
+}
+
+.about .about_main .about_text p {
+  width: 650px;
+  text-align: justify;
+}
